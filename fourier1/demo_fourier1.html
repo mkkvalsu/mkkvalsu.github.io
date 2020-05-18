@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13033,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13099,6 +13099,9 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
+<div>
+  <a href="../index.html"><- Tilbake til liste</a>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Litt-om-forrige-forelesning">Litt om forrige forelesning<a class="anchor-link" href="#Litt-om-forrige-forelesning">&#182;</a></h1><h3 id="Det-som-skal-skje:">Det som skal skje:<a class="anchor-link" href="#Det-som-skal-skje:">&#182;</a></h3><ul>
 <li>Litt om sinus</li>
@@ -13446,11 +13449,11 @@ Vi vil tilnærme en linje fra bildet car.png:</p>
     <span class="n">unscaledCos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">cosinus</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">u</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="p">)])</span>
     <span class="n">basisUsin</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">F</span><span class="p">[</span><span class="n">u</span><span class="p">])</span><span class="o">/</span><span class="n">M</span> <span class="o">*</span> <span class="n">unscaledSin</span>
     <span class="n">basisUcos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">F</span><span class="p">[</span><span class="n">u</span><span class="p">])</span><span class="o">/</span><span class="n">M</span> <span class="o">*</span> <span class="n">unscaledCos</span>
-    
+
     <span class="k">if</span> <span class="n">u</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">u</span> <span class="o">==</span> <span class="n">M</span><span class="o">-</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">u</span> <span class="o">==</span> <span class="n">M</span><span class="o">//</span><span class="mi">2</span><span class="p">:</span>
         <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
         <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span> <span class="k">if</span> <span class="n">u</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">u</span> <span class="o">==</span> <span class="mi">255</span> <span class="k">else</span> <span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">u</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span> 
+        <span class="k">if</span> <span class="n">u</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lookAlike</span><span class="p">,</span> <span class="s2">&quot;--&quot;</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lookAlike</span> <span class="o">+</span> <span class="n">basisUsin</span><span class="p">,</span> <span class="s2">&quot;c--&quot;</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lookAlike</span> <span class="o">+</span> <span class="n">basisUcos</span><span class="p">,</span> <span class="s2">&quot;y--&quot;</span><span class="p">)</span>
@@ -13468,7 +13471,7 @@ Vi vil tilnærme en linje fra bildet car.png:</p>
             <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">unscaledSin</span><span class="p">)</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">unscaledCos</span><span class="p">)</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;A_sin=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">F</span><span class="p">[</span><span class="n">u</span><span class="p">])</span><span class="o">/</span><span class="n">M</span><span class="p">))</span><span class="o">+</span><span class="s2">&quot;,A_cos=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">F</span><span class="p">[</span><span class="n">u</span><span class="p">])</span><span class="o">/</span><span class="n">M</span><span class="p">)))</span>
-    
+
 </pre></div>
 
     </div>
@@ -13762,25 +13765,25 @@ $$ F(u,v) = \sum_{x=0}^{M-1} \sum_{y=0}^{N-1} f(x,y) * e^{-2 \pi j ( \frac{ux}{M
     <p> $ F(u,v) =  sum \Big($ </p>
 </div>
 <div style="float:left;margin-right:5px;margin-left:5px;">
-    <img src="car.png" alt="Drawing" style="width:43px;height:43px;">
+    <img src="../images/car.png" alt="Drawing" style="width:43px;height:43px;">
 </div>
 <div style="float:left;margin-right:5px;">
     <p> * </p>
 </div>
 <div style="float:left;margin-right:5px;margin-left:5px;">
-    <img src="cosinus11.png" alt="Drawing" style="width:43px;height:43px;">
+    <img src="../images/cosinus11.png" alt="Drawing" style="width:43px;height:43px;">
 </div>
 <div style="float:left;margin-right:5px;">
     <p> $\Big),  sum \Big($</p>
 </div>
 <div style="float:left;margin-right:5px;margin-left:5px;">
-    <img src="car.png" alt="Drawing" style="width:43px;height:43px;">
+    <img src="../images/car.png" alt="Drawing" style="width:43px;height:43px;">
 </div>
 <div style="float:left;margin-right:5px;">
     <p> * </p>
 </div>
 <div style="float:left;margin-right:5px;">
-    <img src="sinus11.png" alt="Drawing" style="width:43px;height:43px;">
+    <img src="../images/sinus11.png" alt="Drawing" style="width:43px;height:43px;">
 </div>
 <div style="float:left;margin-right:5px;">
     <p> $\Big)$</p>
@@ -13933,7 +13936,7 @@ $$ f(x,y) = \frac{1}{M N} \sum_{u=0}^{M-1} \sum_{v=0}^{N-1} F(u,v) e^{2 \pi j ( 
         <span class="n">a_sin</span> <span class="o">=</span> <span class="n">F_bad</span><span class="p">[</span><span class="n">v</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">M</span><span class="p">)</span>
         <span class="n">car_bad</span> <span class="o">+=</span> <span class="p">(</span><span class="n">a_cos</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cosinus_bilde</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">)))</span>
         <span class="n">car_bad</span> <span class="o">+=</span> <span class="p">(</span><span class="n">a_sin</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sinus_bilde</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">)))</span>
-        
+
         <span class="k">if</span> <span class="p">(</span><span class="n">u</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">u</span> <span class="o">==</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">==</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
             <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
             <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -14120,7 +14123,7 @@ $$ f(x,y) = \frac{1}{M N} \sum_{u=0}^{M-1} \sum_{v=0}^{N-1} F(u,v) e^{2 \pi j ( 
   </div>
 </body>
 
- 
+
 
 
 </html>
