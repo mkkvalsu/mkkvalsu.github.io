@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13033,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13077,6 +13077,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<a href="../index.html"><- Tilbake til liste over notater</a>
 <h1 id="Litt-om-forrige-forelesning:-Kompresjon-og-koding-II">Litt om forrige forelesning: Kompresjon og koding II<a class="anchor-link" href="#Litt-om-forrige-forelesning:-Kompresjon-og-koding-II">&#182;</a></h1><h3 id="Det-som-skal-skje:">Det som skal skje:<a class="anchor-link" href="#Det-som-skal-skje:">&#182;</a></h3><ul>
 <li>Differansetransform</li>
 <li>Løpelengdetransform</li>
@@ -13190,7 +13191,7 @@ $$ ny_0 = img_0 $$$$ ny_1 = img_1 - img_0 $$$$ ny_n = img_n - img_{n-1} $$<p>Eks
 <h2 id="L&#248;pelengdetransform">L&#248;pelengdetransform<a class="anchor-link" href="#L&#248;pelengdetransform">&#182;</a></h2><p>Sekvenser av like tall kan lagres som <em>tallpar</em>.</p>
 <p>Eksempel:
 $$ \hbox{4444 555 7777} $$
-Kan lagres som 
+Kan lagres som
 $$ \hbox{(4,4) (5,3) (7,4)} $$</p>
 <p>Denne transformen sørger ofte for at videre koding er enklere.</p>
 <p><br/>
@@ -13270,7 +13271,7 @@ $$ \hbox{(4,4) (5,3) (7,4)} $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Bittelitt-om-prediktiv-koding">Bittelitt om prediktiv koding<a class="anchor-link" href="#Bittelitt-om-prediktiv-koding">&#182;</a></h2><h3 id="Prediktiv-koding-i-1D:">Prediktiv koding i 1D:<a class="anchor-link" href="#Prediktiv-koding-i-1D:">&#182;</a></h3><p>Tenk dere rekken: 
+<h2 id="Bittelitt-om-prediktiv-koding">Bittelitt om prediktiv koding<a class="anchor-link" href="#Bittelitt-om-prediktiv-koding">&#182;</a></h2><h3 id="Prediktiv-koding-i-1D:">Prediktiv koding i 1D:<a class="anchor-link" href="#Prediktiv-koding-i-1D:">&#182;</a></h3><p>Tenk dere rekken:
 $$ \hbox{1 2 3 4 5 x} $$</p>
 <p>Hva tror dere x er? Basert på de forrige sier vi 6.</p>
 $$ \hbox{1 2 3 4 5 7} $$<p></p>
@@ -13293,7 +13294,7 @@ $$ \hbox{0 0 0 0 0 1} $$<p></p>
   </div>
 </body>
 
- 
+
 
 
 </html>

@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13033,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13097,6 +13097,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<a href="../index.html"><- Tilbake til liste over notater</a>
 <h1 id="Litt-om-forrige-forelesning:-Fargerbilder-og-fargerom">Litt om forrige forelesning: Fargerbilder og fargerom<a class="anchor-link" href="#Litt-om-forrige-forelesning:-Fargerbilder-og-fargerom">&#182;</a></h1><h3 id="Det-som-skal-skje:">Det som skal skje:<a class="anchor-link" href="#Det-som-skal-skje:">&#182;</a></h3><ul>
 <li>Fargerom<ul>
 <li>RGB</li>
@@ -13228,18 +13229,18 @@ $$ H = \theta \hbox{ if } B &lt;= G \hbox{ else } 360-\theta $$$$ S = 1 - \frac{
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="bday_display.png" alt=""></p>
 <p>Luminansen kan vises alene, som på svart-hvitt TV. Gjerne scroll opp til HSI og se forskjellen mellom Intensity og Luminans!</p>
-<h2 id="Hvordan-komme-til-dette-rommet?">Hvordan komme til dette rommet?<a class="anchor-link" href="#Hvordan-komme-til-dette-rommet?">&#182;</a></h2>$$ \begin{bmatrix} 
+<h2 id="Hvordan-komme-til-dette-rommet?">Hvordan komme til dette rommet?<a class="anchor-link" href="#Hvordan-komme-til-dette-rommet?">&#182;</a></h2>$$ \begin{bmatrix}
     Y \\
     I \\
-    Q 
-\end{bmatrix} = \begin{bmatrix} 
+    Q
+\end{bmatrix} = \begin{bmatrix}
     0.299 &amp; 0.587 &amp; 0.114 \\
     0.596 &amp; -0.274 &amp; -0.322  \\
-    0.211 &amp; -0.522 &amp; 0.311 
-\end{bmatrix} \begin{bmatrix} 
+    0.211 &amp; -0.522 &amp; 0.311
+\end{bmatrix} \begin{bmatrix}
     R \\
     G \\
-    B 
+    B
 \end{bmatrix}$$<p>Tilsvarende finnes for å komme tilbake, s. 33 i foilene.</p>
 
 </div>
@@ -13267,7 +13268,7 @@ $$ H = \theta \hbox{ if } B &lt;= G \hbox{ else } 360-\theta $$$$ S = 1 - \frac{
 <h1 id="CMY(K):-Cyan-Magenta-Yellow-(Black)">CMY(K): Cyan Magenta Yellow (Black)<a class="anchor-link" href="#CMY(K):-Cyan-Magenta-Yellow-(Black)">&#182;</a></h1><p><img src="cmy_add.png" alt=""></p>
 <p>CMY blir noen ganger omtalt som CMYK hvis svart også er med. Brukes i printere, følger maling-logikk, og skal bli mørkere jo mer du legger til.</p>
 <h3 id="Hvordan-komme-hit?">Hvordan komme hit?<a class="anchor-link" href="#Hvordan-komme-hit?">&#182;</a></h3>$$ C = 1 - R $$<p>
-$$ M = 1 - G $$ 
+$$ M = 1 - G $$
 $$ Y = 1 - B $$</p>
 
 </div>
@@ -13355,8 +13356,8 @@ Her: Samme effekt for en tredjedel av jobben.</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Kode kan ignoreres</span>
 
 <span class="kn">from</span> <span class="nn">skimage.color</span> <span class="k">import</span> <span class="n">yiq2rgb</span><span class="p">,</span> <span class="n">rgb2yiq</span>
-<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="k">import</span> <span class="n">convolve2d</span><span class="p">;</span> 
-<span class="n">img</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;Juno2.jpeg&quot;</span><span class="p">)[</span><span class="mi">200</span><span class="p">:</span><span class="mi">2000</span><span class="p">,</span><span class="mi">200</span><span class="p">:</span><span class="mi">1500</span><span class="p">,:];</span> 
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="k">import</span> <span class="n">convolve2d</span><span class="p">;</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;Juno2.jpeg&quot;</span><span class="p">)[</span><span class="mi">200</span><span class="p">:</span><span class="mi">2000</span><span class="p">,</span><span class="mi">200</span><span class="p">:</span><span class="mi">1500</span><span class="p">,:];</span>
 <span class="n">img_yiq</span> <span class="o">=</span> <span class="n">rgb2yiq</span><span class="p">(</span><span class="n">img</span><span class="p">);</span>
 
 <span class="n">h</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span> <span class="mi">2</span><span class="p">,</span>  <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">14</span><span class="p">,</span> <span class="o">-</span> <span class="mi">16</span><span class="p">,</span> <span class="o">-</span><span class="mi">14</span><span class="p">,</span> <span class="o">-</span> <span class="mi">8</span><span class="p">,</span> <span class="o">-</span> <span class="mi">2</span><span class="p">],</span>
@@ -13559,7 +13560,7 @@ Clipping input data to the valid range for imshow with RGB data ([0..1] for floa
   </div>
 </body>
 
- 
+
 
 
 </html>
